@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-es="Petite Chic Finds — Moda y hallazgos con encanto" data-en="Petite Chic Finds — Petite fashion &amp; charming finds">Petite Chic Finds — Moda y hallazgos con encanto</title>
+<meta name="description" content="Hallazgos de moda petite y decoración chic, curados para presupuestos reales.">
+
+<!-- ============================================================
+  META TAGS PARA PINTEREST / RICH PINS
+  Cuando publiques este blog en tu propio dominio, actualiza estas
+  etiquetas por cada entrada real (og:image debe ser la URL de la
+  foto real del post, no un color de fondo CSS como el de esta
+  demo). Esto es lo que Pinterest lee para generar "Rich Pins".
+============================================================= -->
+<meta property="og:title" content="Petite Chic Finds">
+<meta property="og:description" content="Hallazgos de moda petite y decoración chic, curados para presupuestos reales. / Petite fashion & chic decor finds, curated on a real budget.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="REEMPLAZA-CON-URL-DE-TU-FOTO-PRINCIPAL.jpg">
+<meta name="pinterest-rich-pin" content="true">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ivory:#FAF6F0;
+    --ivory-deep:#F1E9DE;
+    --plum:#3B2731;
+    --plum-soft:#5A3F4A;
+    --rose:#C4818C;
+    --rose-deep:#A6626D;
+    --gold:#A67C46;
+    --sage:#8C9A80;
+    --ink:#2C2024;
+    --radius-card: 4px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+
+  h1,h2,h3,.serif{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:500;
+    letter-spacing:0.01em;
+  }
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:relative;
+    padding:26px 0 22px;
+    border-bottom:1px solid rgba(59,39,49,0.12);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .logo{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.65rem;
+    font-style:italic;
+    font-weight:600;
+    color:var(--plum);
+    white-space:nowrap;
+  }
+  .logo .dot{color:var(--rose-deep);font-style:normal;}
+  nav.main-nav{display:flex;gap:34px;font-size:0.95rem;}
+  nav.main-nav a{
+    color:var(--plum-soft);
+    position:relative;
+    padding-bottom:3px;
+  }
+  nav.main-nav a:hover{color:var(--rose-deep);}
+  .header-actions{display:flex;align-items:center;gap:14px;}
+  .pin-follow{
+    display:flex;align-items:center;gap:8px;
+    font-size:0.88rem;
+    color:var(--plum);
+    border:1px solid var(--plum);
+    padding:8px 16px;
+    border-radius:999px;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .pin-follow:hover{background:var(--plum);color:var(--ivory);}
+  .pin-follow svg{width:14px;height:14px;flex-shrink:0;}
+
+  .lang-switch{
+    display:flex;align-items:center;
+    border:1px solid rgba(59,39,49,0.25);
+    border-radius:999px;
+    overflow:hidden;
+    font-size:0.8rem;
+    letter-spacing:0.03em;
+  }
+  .lang-switch button{
+    background:none;border:none;cursor:pointer;
+    padding:8px 13px;
+    color:var(--plum-soft);
+    font-family:'Work Sans',sans-serif;
+    font-size:0.8rem;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .lang-switch button.active{
+    background:var(--plum);color:var(--ivory);
+  }
+
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:4px;}
+  .menu-toggle span{display:block;width:22px;height:2px;background:var(--plum);margin:5px 0;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:76px 0 88px;}
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:64px;
+    align-items:center;
+  }
+  .hero-eyebrow{
+    font-size:0.82rem;
+    color:var(--rose-deep);
+    font-style:italic;
+    font-family:'Cormorant Garamond', serif;
+    margin:0 0 14px;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem, 4.4vw, 3.6rem);
+    color:var(--plum);
+    line-height:1.08;
+    margin:0 0 24px;
+    max-width:15ch;
+  }
+  .hero p.lede{
+    font-size:1.08rem;
+    color:var(--plum-soft);
+    max-width:46ch;
+    margin:0 0 32px;
+  }
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:10px;
+    background:var(--rose-deep);
+    color:var(--ivory);
+    padding:14px 26px;
+    border-radius:2px;
+    font-size:0.92rem;
+    letter-spacing:0.02em;
+    transition:background 0.15s ease;
+  }
+  .btn-primary:hover{background:var(--plum);}
+  .btn-primary svg{width:15px;height:15px;}
+
+  .hero-collage{
+    position:relative;
+    height:420px;
+  }
+  .swatch{
+    position:absolute;
+    border-radius:var(--radius-card);
+    box-shadow:0 18px 34px rgba(59,39,49,0.18);
+  }
+  .swatch-a{
+    width:62%;height:60%;
+    top:0;right:0;
+    background:linear-gradient(155deg,#D9A5AC 0%, #C4818C 55%, #A6626D 100%);
+  }
+  .swatch-b{
+    width:48%;height:44%;
+    bottom:6%;left:0;
+    background:linear-gradient(155deg,#E7DCC9 0%, #CDBB9A 60%, #A67C46 100%);
+    transform:rotate(-4deg);
+  }
+  .swatch-c{
+    width:34%;height:30%;
+    bottom:0;right:14%;
+    background:linear-gradient(155deg,#9CA893 0%, #8C9A80 60%, #6E7A63 100%);
+    transform:rotate(6deg);
+  }
+  .swatch-label{
+    position:absolute;bottom:14px;left:16px;right:16px;
+    color:#fff;font-family:'Cormorant Garamond', serif;
+    font-style:italic;font-size:0.92rem;
+    text-shadow:0 1px 6px rgba(0,0,0,0.25);
+  }
+
+  /* ---------- SECTION HEADS ---------- */
+  .section-head{
+    display:flex;align-items:baseline;justify-content:space-between;
+    margin:0 0 40px;
+    flex-wrap:wrap;gap:10px;
+  }
+  .section-head h2{
+    font-size:2rem;color:var(--plum);margin:0;
+  }
+  .section-head p{
+    margin:0;color:var(--plum-soft);font-size:0.95rem;max-width:38ch;
+  }
+
+  /* ---------- MASONRY / PIN GRID ---------- */
+  .finds{padding:20px 0 100px;}
+  .masonry{
+    column-count:3;
+    column-gap:26px;
+  }
+  .pin-card{
+    break-inside:avoid;
+    margin-bottom:26px;
+    background:#fff;
+    border-radius:var(--radius-card);
+    overflow:hidden;
+    box-shadow:0 6px 18px rgba(59,39,49,0.08);
+  }
+  .pin-photo{
+    position:relative;
+    width:100%;
+    display:flex;align-items:flex-end;
+    padding:18px;
+  }
+  .pin-photo::after{
+    content:'';position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 100%);
+  }
+  .pin-photo .tag{
+    position:relative;z-index:1;
+    font-size:0.72rem;
+    letter-spacing:0.04em;
+    color:#fff;
+    background:rgba(0,0,0,0.28);
+    padding:5px 11px;
+    border-radius:999px;
+    font-family:'Work Sans',sans-serif;
+  }
+  .pin-save{
+    position:absolute;top:14px;right:14px;z-index:2;
+    display:inline-flex;align-items:center;gap:6px;
+    background:var(--rose-deep);
+    color:#fff;
+    font-size:0.78rem;font-weight:500;
+    padding:9px 14px;
+    border-radius:999px;
+    opacity:0;
+    transform:translateY(-4px);
+    transition:opacity 0.15s ease, transform 0.15s ease, background 0.15s ease;
+  }
+  .pin-save svg{width:12px;height:12px;}
+  .pin-card:hover .pin-save, .pin-save:focus-visible{
+    opacity:1;transform:translateY(0);
+  }
+  .pin-save:hover{background:var(--plum);}
+  .pin-body{padding:20px 20px 22px;}
+  .pin-body .cat{
+    font-size:0.74rem;
+    color:var(--gold);
+    font-family:'Work Sans',sans-serif;
+    letter-spacing:0.03em;
+    margin:0 0 8px;
+  }
+  .pin-body h3{
+    font-size:1.32rem;color:var(--plum);margin:0 0 10px;line-height:1.25;
+  }
+  .pin-body p{
+    font-size:0.9rem;color:var(--plum-soft);margin:0 0 14px;
+  }
+  .pin-body .price{
+    font-size:0.86rem;color:var(--ink);font-weight:500;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    background:var(--ivory-deep);
+    padding:90px 0;
+  }
+  .about .wrap{
+    display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;
+  }
+  .about-portrait{
+    aspect-ratio:4/5;
+    border-radius:var(--radius-card);
+    background:linear-gradient(160deg,#EADFCF 0%, #C4818C 55%, #5A3F4A 100%);
+    box-shadow:0 20px 40px rgba(59,39,49,0.18);
+  }
+  .about h2{font-size:2rem;color:var(--plum);margin:0 0 18px;}
+  .about p{color:var(--plum-soft);max-width:52ch;margin:0 0 14px;font-size:1rem;}
+  .about .signature{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;color:var(--rose-deep);font-size:1.4rem;margin-top:20px;
+  }
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter{
+    background:var(--plum);
+    color:var(--ivory);
+    padding:70px 0;
+    text-align:center;
+  }
+  .newsletter h2{color:var(--ivory);font-size:2.1rem;margin:0 0 12px;}
+  .newsletter p{color:#D9C9CE;margin:0 0 30px;font-size:0.98rem;}
+  .nl-form{
+    display:flex;justify-content:center;gap:12px;max-width:440px;margin:0 auto;flex-wrap:wrap;
+  }
+  .nl-form input{
+    flex:1;min-width:200px;
+    padding:13px 16px;
+    border:1px solid rgba(250,246,240,0.35);
+    background:transparent;
+    color:var(--ivory);
+    border-radius:2px;
+    font-family:'Work Sans',sans-serif;
+    font-size:0.92rem;
+  }
+  .nl-form input::placeholder{color:#C8B4BB;}
+  .nl-form button{
+    background:var(--rose-deep);color:#fff;border:none;
+    padding:13px 24px;border-radius:2px;font-size:0.9rem;cursor:pointer;
+    transition:background 0.15s ease;
+  }
+  .nl-form button:hover{background:var(--rose);}
+  .nl-note{font-size:0.76rem;color:#B79AA1;margin-top:14px;}
+
+  /* ---------- FOOTER ---------- */
+  footer{padding:46px 0;}
+  footer .wrap{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;
+  }
+  footer .f-logo{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--plum);font-size:1.1rem;}
+  footer .f-links{display:flex;gap:22px;font-size:0.86rem;color:var(--plum-soft);}
+  footer .f-social{display:flex;gap:14px;}
+  footer .f-social a{
+    width:34px;height:34px;border-radius:50%;
+    border:1px solid rgba(59,39,49,0.18);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--plum-soft);
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  footer .f-social a:hover{background:var(--rose-deep);color:#fff;border-color:var(--rose-deep);}
+  footer .f-social svg{width:15px;height:15px;}
+
+  @media (max-width:880px){
+    .hero .wrap{grid-template-columns:1fr;gap:44px;}
+    .hero-collage{height:320px;}
+    .about .wrap{grid-template-columns:1fr;}
+    .about-portrait{max-width:280px;}
+    .masonry{column-count:2;}
+    nav.main-nav{display:none;}
+    .menu-toggle{display:block;}
+  }
+  @media (max-width:560px){
+    .masonry{column-count:1;}
+    .wrap{padding:0 20px;}
+    .hero{padding:52px 0 60px;}
+    .pin-follow span.label{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo">Petite Chic Finds<span class="dot">.</span></a>
+    <nav class="main-nav">
+      <a href="#finds" data-es="Hallazgos" data-en="Finds">Hallazgos</a>
+      <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
+      <a href="#newsletter" data-es="Newsletter" data-en="Newsletter">Newsletter</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" id="lang-es" class="active">ES</button>
+        <button type="button" id="lang-en">EN</button>
+      </div>
+      <a class="pin-follow" id="follow-link" href="https://www.pinterest.com/petitechicfinds/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+        <span class="label" data-es="Sígueme en Pinterest" data-en="Follow on Pinterest">Sígueme en Pinterest</span>
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="hero-eyebrow" data-es="Moda petite &amp; hallazgos con carácter" data-en="Petite fashion &amp; finds with character">Moda petite &amp; hallazgos con carácter</p>
+      <h1 data-es="Cosas pequeñas, buen gusto grande." data-en="Small things, big taste.">Cosas pequeñas, buen gusto grande.</h1>
+      <p class="lede" data-es="Curamos prendas pensadas para cuerpos petite y objetos de decoración con encanto, todo con precios que tienen sentido. Cada hallazgo, listo para guardar en tu tablero." data-en="We curate clothes made for petite frames and decor pieces with charm, all at prices that make sense. Every find, ready to save to your board.">Curamos prendas pensadas para cuerpos petite y objetos de decoración con encanto, todo con precios que tienen sentido. Cada hallazgo, listo para guardar en tu tablero.</p>
+      <a class="btn-primary" href="#finds">
+        <span data-es="Ver los hallazgos de la semana" data-en="See this week's finds">Ver los hallazgos de la semana</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <div class="hero-collage">
+      <div class="swatch swatch-a"><span class="swatch-label" data-es="Abrigo cruzado, talla petite" data-en="Wrap coat, petite sizing">Abrigo cruzado, talla petite</span></div>
+      <div class="swatch swatch-b"><span class="swatch-label" data-es="Rincón de lectura, versión mini" data-en="Reading nook, mini edition">Rincón de lectura, versión mini</span></div>
+      <div class="swatch swatch-c"></div>
+    </div>
+  </div>
+</section>
+
+<section class="finds" id="finds">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-es="Hallazgos frescos" data-en="Fresh finds">Hallazgos frescos</h2>
+      <p data-es="Guarda tus favoritos directo en Pinterest — el botón aparece al pasar el cursor sobre cada foto." data-en="Save your favorites straight to Pinterest — the button appears when you hover over each photo.">Guarda tus favoritos directo en Pinterest — el botón aparece al pasar el cursor sobre cada foto.</p>
+    </div>
+
+    <div class="masonry">
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:280px;background:linear-gradient(160deg,#E3C7CB 0%, #C4818C 60%, #8C4F5A 100%);">
+          <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
+          <a class="pin-save" href="#" data-desc-es="El abrigo cruzado que no te queda como saco de dormir: 5 opciones petite bajo $90." data-desc-en="The wrap coat that won't swallow you: 5 petite picks under $90." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Guardarropa" data-en="Wardrobe">Guardarropa</p>
+          <h3 data-es="El abrigo cruzado que no te queda como saco de dormir" data-en="The wrap coat that won't swallow you whole">El abrigo cruzado que no te queda como saco de dormir</h3>
+          <p data-es="Cinco marcas que sí cortan sus abrigos pensando en tallas petite, sin sacrificar el volumen de la temporada." data-en="Five brands that actually cut their coats for petite frames, without giving up this season's volume.">Cinco marcas que sí cortan sus abrigos pensando en tallas petite, sin sacrificar el volumen de la temporada.</p>
+          <p class="price" data-es="Desde $58" data-en="From $58">Desde $58</p>
+        </div>
+      </article>
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:200px;background:linear-gradient(160deg,#E7DCC9 0%, #CDBB9A 60%, #A67C46 100%);">
+          <span class="tag" data-es="Decor" data-en="Decor">Decor</span>
+          <a class="pin-save" href="#" data-desc-es="Rincón de lectura para espacios pequeños: 6 hallazgos bajo $50." data-desc-en="A reading nook for small spaces: 6 finds under $50." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Espacios pequeños" data-en="Small spaces">Espacios pequeños</p>
+          <h3 data-es="Un rincón de lectura, versión mini" data-en="A reading nook, mini edition">Un rincón de lectura, versión mini</h3>
+          <p data-es="No necesitas un cuarto extra: una silla plegable bonita, una lámpara de pinza y una manta bastan." data-en="You don't need a spare room: a pretty folding chair, a clip lamp and a throw blanket are enough.">No necesitas un cuarto extra: una silla plegable bonita, una lámpara de pinza y una manta bastan.</p>
+          <p class="price" data-es="Desde $22" data-en="From $22">Desde $22</p>
+        </div>
+      </article>
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:240px;background:linear-gradient(160deg,#D7C9B4 0%, #A67C46 65%, #6E5330 100%);">
+          <span class="tag" data-es="Accesorios" data-en="Accessories">Accesorios</span>
+          <a class="pin-save" href="#" data-desc-es="Dupes de joyería dorada que no dejan la piel verde, seleccionados por menos de $30." data-desc-en="Gold jewelry dupes that won't turn your skin green, all under $30." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Joyería" data-en="Jewelry">Joyería</p>
+          <h3 data-es="Dorado que no te deja la piel verde" data-en="Gold that won't turn your skin green">Dorado que no te deja la piel verde</h3>
+          <p data-es="Probamos ocho marcas de bisutería bañada en oro. Estas fueron las únicas que sobrevivieron a la ducha." data-en="We tested eight gold-plated jewelry brands. These were the only ones that survived a shower.">Probamos ocho marcas de bisutería bañada en oro. Estas fueron las únicas que sobrevivieron a la ducha.</p>
+          <p class="price" data-es="Desde $14" data-en="From $14">Desde $14</p>
+        </div>
+      </article>
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:220px;background:linear-gradient(160deg,#B7C1AE 0%, #8C9A80 60%, #59634F 100%);">
+          <span class="tag" data-es="Guardarropa" data-en="Wardrobe">Guardarropa</span>
+          <a class="pin-save" href="#" data-desc-es="Diez piezas para un armario cápsula petite que funciona todo el año." data-desc-en="Ten pieces for a petite capsule wardrobe that works all year." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Cápsula" data-en="Capsule">Cápsula</p>
+          <h3 data-es="El armario cápsula petite en diez piezas" data-en="The petite capsule wardrobe in ten pieces">El armario cápsula petite en diez piezas</h3>
+          <p data-es="Un pantalón, un blazer, dos blusas y la fórmula para que se sientan como veinte outfits distintos." data-en="One pair of trousers, one blazer, two blouses, and the formula that makes them feel like twenty different outfits.">Un pantalón, un blazer, dos blusas y la fórmula para que se sientan como veinte outfits distintos.</p>
+          <p class="price" data-es="Guía completa" data-en="Full guide">Guía completa</p>
+        </div>
+      </article>
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:300px;background:linear-gradient(160deg,#E8CFC2 0%, #C4818C 55%, #5A3F4A 100%);">
+          <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
+          <a class="pin-save" href="#" data-desc-es="Blazers cortos para marcos petite: dónde termina el largo perfecto." data-desc-en="Cropped blazers for petite frames: where the perfect length ends." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Guardarropa" data-en="Wardrobe">Guardarropa</p>
+          <h3 data-es="El blazer corto y el largo que sí favorece" data-en="The cropped blazer and the length that actually flatters">El blazer corto y el largo que sí favorece</h3>
+          <p data-es="La regla de la cadera, explicada, más seis blazers que la respetan al pie de la letra." data-en="The hip rule, explained, plus six blazers that follow it to the letter.">La regla de la cadera, explicada, más seis blazers que la respetan al pie de la letra.</p>
+          <p class="price" data-es="Desde $46" data-en="From $46">Desde $46</p>
+        </div>
+      </article>
+
+      <article class="pin-card">
+        <div class="pin-photo" style="height:180px;background:linear-gradient(160deg,#DCC9D2 0%, #A6626D 60%, #3B2731 100%);">
+          <span class="tag" data-es="Belleza" data-en="Beauty">Belleza</span>
+          <a class="pin-save" href="#" data-desc-es="Tocador diminuto, gran organización: hallazgos de belleza para espacios chicos." data-desc-en="Tiny vanity, big organization: beauty finds for small spaces." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            <span data-es="Pin" data-en="Pin">Pin</span>
+          </a>
+        </div>
+        <div class="pin-body">
+          <p class="cat" data-es="Espacios pequeños" data-en="Small spaces">Espacios pequeños</p>
+          <h3 data-es="Tocador diminuto, gran organización" data-en="Tiny vanity, big organization">Tocador diminuto, gran organización</h3>
+          <p data-es="Un organizador giratorio y dos espejos con luz cambiaron por completo un rincón de dos metros cuadrados." data-en="A rotating organizer and two lighted mirrors completely transformed a two-square-meter corner.">Un organizador giratorio y dos espejos con luz cambiaron por completo un rincón de dos metros cuadrados.</p>
+          <p class="price" data-es="Desde $19" data-en="From $19">Desde $19</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-portrait"></div>
+    <div>
+      <h2 data-es="Sobre Petite Chic Finds" data-en="About Petite Chic Finds">Sobre Petite Chic Finds</h2>
+      <p data-es="Mido 1.55 m y me cansé de que la moda me quedara pensada para alguien más alto. Empecé a guardar cada prenda, cada mueble y cada objeto que sí respetaba proporciones pequeñas — y terminé con un tablero de Pinterest que no dejaba de crecer." data-en="I'm 5'1&quot; and got tired of fashion being designed for someone taller. I started saving every piece of clothing, furniture, and object that actually respected smaller proportions — and ended up with a Pinterest board that never stopped growing.">Mido 1.55 m y me cansé de que la moda me quedara pensada para alguien más alto. Empecé a guardar cada prenda, cada mueble y cada objeto que sí respetaba proporciones pequeñas — y terminé con un tablero de Pinterest que no dejaba de crecer.</p>
+      <p data-es="Ahora comparto aquí cada hallazgo antes de subirlo a Pinterest: lo que realmente compro, lo que devuelvo y por qué. Sin filtros de talla única." data-en="Now I share every find here before it goes up on Pinterest: what I actually buy, what I return, and why. No one-size-fits-all filter.">Ahora comparto aquí cada hallazgo antes de subirlo a Pinterest: lo que realmente compro, lo que devuelvo y por qué. Sin filtros de talla única.</p>
+      <p class="signature" data-es="— La curadora detrás de Petite Chic Finds" data-en="— The curator behind Petite Chic Finds">— La curadora detrás de Petite Chic Finds</p>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="newsletter">
+  <div class="wrap">
+    <h2 data-es="Un hallazgo a tu correo, cada domingo" data-en="One find in your inbox, every Sunday">Un hallazgo a tu correo, cada domingo</h2>
+    <p data-es="Sin spam, sin relleno — solo lo que de verdad vale la pena guardar." data-en="No spam, no filler — just what's actually worth saving.">Sin spam, sin relleno — solo lo que de verdad vale la pena guardar.</p>
+    <form class="nl-form" id="nl-form">
+      <input type="email" id="nl-email" placeholder="tu@correo.com" required>
+      <button type="submit" id="nl-btn" data-es="Suscribirme" data-en="Subscribe">Suscribirme</button>
+    </form>
+    <p class="nl-note" data-es="Este formulario es una maqueta visual; conéctalo a tu proveedor de email (Mailchimp, ConvertKit, etc.) cuando publiques el blog en tu propio dominio." data-en="This form is a visual mockup; connect it to your email provider (Mailchimp, ConvertKit, etc.) once you publish the blog on your own domain.">Este formulario es una maqueta visual; conéctalo a tu proveedor de email (Mailchimp, ConvertKit, etc.) cuando publiques el blog en tu propio dominio.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="f-logo">Petite Chic Finds</span>
+    <div class="f-links">
+      <a href="#finds" data-es="Hallazgos" data-en="Finds">Hallazgos</a>
+      <a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a>
+      <a href="#newsletter" data-es="Newsletter" data-en="Newsletter">Newsletter</a>
+    </div>
+    <div class="f-social">
+      <a href="https://www.pinterest.com/petitechicfinds/" target="_blank" rel="noopener" aria-label="Pinterest">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      </a>
+      <a href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ---------- i18n: toggle between Spanish and English ----------
+  var currentLang = 'es';
+  try {
+    var saved = localStorage.getItem('pcf-lang');
+    if (saved === 'en' || saved === 'es') currentLang = saved;
+  } catch (e) { /* localStorage unavailable, default to es */ }
+
+  function applyLang(lang){
+    currentLang = lang;
+    document.documentElement.setAttribute('lang', lang);
+    document.querySelectorAll('[data-' + lang + ']').forEach(function(el){
+      el.innerHTML = el.getAttribute('data-' + lang);
+    });
+    document.getElementById('lang-es').classList.toggle('active', lang === 'es');
+    document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+    var emailInput = document.getElementById('nl-email');
+    if (emailInput) emailInput.setAttribute('placeholder', lang === 'es' ? 'tu@correo.com' : 'you@email.com');
+    var followLabel = document.querySelector('.pin-follow .label');
+    try { localStorage.setItem('pcf-lang', lang); } catch (e) {}
+  }
+
+  document.getElementById('lang-es').addEventListener('click', function(){ applyLang('es'); });
+  document.getElementById('lang-en').addEventListener('click', function(){ applyLang('en'); });
+  applyLang(currentLang);
+
+  // ---------- Pinterest "Pin it" links ----------
+  // Formato oficial / official format:
+  // https://www.pinterest.com/pin/create/button/?url=...&media=...&description=...
+  document.querySelectorAll('.pin-save').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      var pageUrl = encodeURIComponent(window.location.href);
+      var descAttr = currentLang === 'en' ? 'data-desc-en' : 'data-desc-es';
+      var desc = encodeURIComponent(btn.getAttribute(descAttr) || document.title);
+      // media (la foto del pin) debe ser una URL de imagen real y pública
+      // una vez publiques el blog con fotos reales.
+      var media = pageUrl;
+      var pinUrl = 'https://www.pinterest.com/pin/create/button/?url=' + pageUrl + '&media=' + media + '&description=' + desc;
+      window.open(pinUrl, '_blank', 'noopener');
+    });
+  });
+
+  // ---------- Newsletter mock submit ----------
+  var nlForm = document.getElementById('nl-form');
+  if (nlForm){
+    nlForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('nl-btn').textContent = currentLang === 'en' ? 'You\'re in!' : '¡Listo, gracias!';
+    });
+  }
+
+  // ---------- Mobile menu ----------
+  var toggle = document.querySelector('.menu-toggle');
+  var nav = document.querySelector('.main-nav');
+  if(toggle){
+    toggle.addEventListener('click', function(){
+      var open = nav.style.display === 'flex';
+      nav.style.display = open ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '64px';
+      nav.style.right = '32px';
+      nav.style.background = '#fff';
+      nav.style.padding = '18px 24px';
+      nav.style.boxShadow = '0 12px 24px rgba(59,39,49,0.15)';
+      nav.style.gap = '14px';
+    });
+  }
+</script>
+
+</body>
+</html>
