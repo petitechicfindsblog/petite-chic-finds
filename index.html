@@ -204,7 +204,33 @@
   .section-head p{
     margin:0;color:var(--plum-soft);font-size:0.95rem;max-width:38ch;
   }
+  
+  .category-nav{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:0 auto 50px;
+}
 
+.category-nav a{
+  display:inline-block;
+  padding:12px 22px;
+  border:1px solid rgba(59,39,49,0.25);
+  border-radius:2px;
+  color:var(--plum);
+  background:transparent;
+  font-size:0.88rem;
+  letter-spacing:0.02em;
+  text-decoration:none;
+  transition:all 0.2s ease;
+}
+
+.category-nav a:hover{
+  background:var(--plum);
+  color:var(--ivory);
+  border-color:var(--plum);
+}
   /* ---------- MASONRY / PIN GRID ---------- */
   .finds{padding:20px 0 100px;}
   .masonry{
