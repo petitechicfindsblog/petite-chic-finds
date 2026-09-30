@@ -689,12 +689,13 @@
     });
   });
 
-  // ---------- Newsletter mock submit ----------
+  // ---------- Newsletter ----------
+  // The form submits to Formspree; do not prevent the native submit.
   var nlForm = document.getElementById('nl-form');
   if (nlForm){
-    nlForm.addEventListener('submit', function(e){
-      e.preventDefault();
-      document.getElementById('nl-btn').textContent = currentLang === 'en' ? 'You\'re in!' : '¡Listo, gracias!';
+    nlForm.addEventListener('submit', function(){
+      var btn = document.getElementById('nl-btn');
+      if (btn) btn.textContent = currentLang === 'en' ? 'Sending…' : 'Enviando…';
     });
   }
 
