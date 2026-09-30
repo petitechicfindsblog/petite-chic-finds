@@ -314,22 +314,90 @@
   /* ---------- ABOUT ---------- */
   .about{
     background:var(--ivory-deep);
-    padding:90px 0;
+    padding:86px 0 92px;
   }
   .about .wrap{
-    display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;
+    display:grid;
+    grid-template-columns:0.72fr 1.28fr;
+    gap:64px;
+    align-items:center;
   }
-  .about-portrait{
-    aspect-ratio:4/3;
-    border-radius:var(--radius-card);
-    background:linear-gradient(160deg,#EADFCF 0%, #C4818C 55%, #5A3F4A 100%);
-    box-shadow:0 20px 40px rgba(59,39,49,0.18);
+  .about-card{
+    position:relative;
+    min-height:330px;
+    padding:38px;
+    border:1px solid rgba(59,39,49,0.12);
+    background:linear-gradient(145deg,#fff 0%,#F6EEE5 100%);
+    box-shadow:0 18px 38px rgba(59,39,49,0.10);
+    overflow:hidden;
   }
-  .about h2{font-size:2rem;color:var(--plum);margin:0 0 18px;}
-  .about p{color:var(--plum-soft);max-width:52ch;margin:0 0 14px;font-size:1rem;}
-  .about .signature{
+  .about-card::before{
+    content:'';
+    position:absolute;
+    width:170px;height:170px;
+    border-radius:50%;
+    background:rgba(196,129,140,0.16);
+    top:-68px;right:-52px;
+  }
+  .about-card::after{
+    content:'';
+    position:absolute;
+    width:110px;height:110px;
+    border-radius:50%;
+    background:rgba(166,124,70,0.12);
+    bottom:-46px;left:-34px;
+  }
+  .about-kicker{
+    position:relative;z-index:1;
+    margin:0 0 18px;
+    color:var(--rose-deep);
     font-family:'Cormorant Garamond',serif;
-    font-style:italic;color:var(--rose-deep);font-size:1.4rem;margin-top:20px;
+    font-style:italic;
+    font-size:1.05rem;
+  }
+  .about-quote{
+    position:relative;z-index:1;
+    margin:0;
+    color:var(--plum);
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.05rem;
+    line-height:1.12;
+  }
+  .about-mark{
+    position:relative;z-index:1;
+    display:inline-block;
+    margin-top:28px;
+    padding-top:14px;
+    border-top:1px solid rgba(166,124,70,0.45);
+    color:var(--gold);
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+  }
+  .about-copy h2{
+    font-size:2.25rem;
+    color:var(--plum);
+    margin:0 0 18px;
+  }
+  .about-copy p{
+    color:var(--plum-soft);
+    max-width:58ch;
+    margin:0 0 15px;
+    font-size:1rem;
+  }
+  .about-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:24px;
+  }
+  .about-point{
+    border:1px solid rgba(59,39,49,0.16);
+    background:rgba(255,255,255,0.55);
+    padding:9px 13px;
+    font-size:0.78rem;
+    color:var(--plum);
+    letter-spacing:0.02em;
   }
 
   /* ---------- NEWSLETTER ---------- */
@@ -394,8 +462,8 @@
   @media (max-width:880px){
     .hero .wrap{grid-template-columns:1fr;gap:44px;}
     .hero-collage{height:320px;}
-    .about .wrap{grid-template-columns:1fr;}
-    .about-portrait{max-width:280px;}
+    .about .wrap{grid-template-columns:1fr;gap:36px;}
+    .about-card{min-height:280px;}
     .masonry{column-count:2;}
     nav.main-nav{display:none;}
     .menu-toggle{display:block;}
@@ -450,14 +518,28 @@
     </div>
   </div>
  </section>
-<section id="about" style="padding-bottom:20px;">
+<section class="about" id="about">
   <div class="wrap">
-    <div class="section-head">
-    <h2 data-es="Sobre Petite Chic Finds" data-en="About Petite Chic Finds">Sobre Petite Chic Finds</h2>
-   <p data-es="Petite Chic Finds es un destino de estilo y estilo de vida para mujeres que disfrutan descubrir hallazgos bonitos, prácticos y accesibles."
-         data-en="Petite Chic Finds is a style and lifestyle destination for women who love discovering beautiful, practical, and affordable finds. From petite-friendly fashion and accessories to beauty and cozy home finds, we curate pieces that make everyday style feel a little easier — and a lot more chic.">
-        Petite Chic Finds es un destino de estilo y lifestyle para mujeres que disfrutan descubrir hallazgos bonitos, prácticos y accesibles. Desde moda petite y accesorios hasta belleza y detalles acogedores para el hogar, seleccionamos piezas que hacen que el estilo de cada día sea un poco más fácil y mucho más chic.
+    <div class="about-card" aria-label="Petite Chic Finds editorial note">
+      <p class="about-kicker" data-es="Una mirada petite al estilo cotidiano" data-en="A petite perspective on everyday style">Una mirada petite al estilo cotidiano</p>
+      <p class="about-quote" data-es="“Pequeña estatura. Gran atención al detalle.”" data-en="“Petite frame. Big attention to detail.”">“Pequeña estatura. Gran atención al detalle.”</p>
+      <span class="about-mark" data-es="Petite Chic Finds · Curated style" data-en="Petite Chic Finds · Curated style">Petite Chic Finds · Curated style</span>
+    </div>
+    <div class="about-copy">
+      <h2 data-es="Sobre Petite Chic Finds" data-en="About Petite Chic Finds">Sobre Petite Chic Finds</h2>
+      <p data-es="Petite Chic Finds nace para hacer más fácil encontrar prendas, accesorios, belleza y detalles para el hogar que se sientan bonitos, prácticos y fáciles de incorporar a la vida real."
+         data-en="Petite Chic Finds was created to make it easier to discover fashion, accessories, beauty, and home finds that feel beautiful, practical, and easy to bring into real life.">
+        Petite Chic Finds nace para hacer más fácil encontrar prendas, accesorios, belleza y detalles para el hogar que se sientan bonitos, prácticos y fáciles de incorporar a la vida real.
       </p>
+      <p data-es="La selección parte de una perspectiva petite de 4'9&quot;: buscamos proporciones favorecedoras, piezas versátiles y estilos que ayuden a crear looks pulidos sin complicarlos."
+         data-en="The selection comes from a 4'9&quot; petite perspective: we look for flattering proportions, versatile pieces, and polished styles that make getting dressed feel simpler.">
+        La selección parte de una perspectiva petite de 4'9": buscamos proporciones favorecedoras, piezas versátiles y estilos que ayuden a crear looks pulidos sin complicarlos.
+      </p>
+      <div class="about-points" aria-label="What Petite Chic Finds focuses on">
+        <span class="about-point" data-es="Proporciones petite" data-en="Petite proportions">Proporciones petite</span>
+        <span class="about-point" data-es="Hallazgos accesibles" data-en="Accessible finds">Hallazgos accesibles</span>
+        <span class="about-point" data-es="Estilo fácil de usar" data-en="Easy-to-style pieces">Estilo fácil de usar</span>
+      </div>
     </div>
   </div>
 </section>
