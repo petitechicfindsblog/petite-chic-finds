@@ -248,23 +248,30 @@
   .pin-photo{
     position:relative;
     width:100%;
-    aspect-ratio:4/3!important;
-    max-height:280px;
-    display:flex;align-items:flex-end;
-    padding:18px;
+    aspect-ratio:auto!important;
+    max-height:none;
+    display:block;
+    padding:0;
     overflow:hidden;
+    background-color:#F1E9DE;
+  }
+  .pin-photo .pin-image{
+    display:block;
+    width:100%;
+    height:auto;
+    max-width:100%;
   }
   .pin-photo::after{
     content:'';position:absolute;inset:0;
     background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 100%);
   }
   .pin-photo .brand-mark{position:absolute;right:16px;top:16px;z-index:2;font-size:0.66rem;letter-spacing:0.14em;color:#fff;background:rgba(59,39,49,0.88);padding:7px 11px;border-radius:2px;font-family:'Work Sans',sans-serif;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.16);}
-  .accessory-card .pin-photo{aspect-ratio:4/3!important;max-height:280px;background-position:center 38%!important;}
+  .accessory-card .pin-photo{aspect-ratio:auto!important;max-height:none;background-position:center!important;}
   .accessory-card .pin-photo::after{background:linear-gradient(180deg,rgba(0,0,0,0.05) 35%,rgba(0,0,0,0.48) 100%);}
   .accessory-card .pin-body{padding-top:22px;}
   .accessory-card .pin-body .cat{color:var(--rose-deep);text-transform:uppercase;letter-spacing:0.08em;font-size:0.68rem;}
   .pin-photo .tag{
-    position:relative;z-index:1;
+    position:absolute;left:18px;bottom:18px;z-index:2;
     font-size:0.72rem;
     letter-spacing:0.04em;
     color:#fff;
@@ -472,7 +479,7 @@
     .menu-toggle{display:block;}
   }
   @media (max-width:560px){
-    .pin-photo{max-height:240px;}
+    .pin-photo{max-height:none;}
     .masonry{column-count:1;}
     .wrap{padding:0 20px;}
     .hero{padding:52px 0 60px;}
@@ -576,6 +583,7 @@
 
       <article class="pin-card" id="petite-fashion">
         <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('outfits-petite-clean.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="outfits-petite-clean.png" alt="Petite Chic Finds — outfits petite clean">
           <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
           <a class="pin-save" href="#" data-desc-es="Un abrigo beige elegante con cuello Peter Pan y un largo favorecedor." data-desc-en="An elegant beige coat with a Peter Pan collar and a flattering mid-thigh length." target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
@@ -592,6 +600,7 @@
 
       <article class="pin-card" id="home">
         <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('a_cozy_warm_well_styled_interior_close_up_scene.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="a_cozy_warm_well_styled_interior_close_up_scene.png" alt="Petite Chic Finds — a cozy warm well styled interior close up scene">
           <span class="tag" data-es="Decor" data-en="Decor">Decor</span>
           <a class="pin-save" href="#" data-desc-es="Rincón de lectura para espacios pequeños: 6 hallazgos bajo $50." data-desc-en="A reading nook for small spaces: 6 finds under $50." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
@@ -610,6 +619,7 @@
 
       <article class="pin-card accessory-card" id="accessories">
         <div class="pin-photo" style="background-image:url('accesorios-favoritos.png');background-size:cover;">
+          <img class="pin-image" src="accesorios-favoritos.png" alt="Petite Chic Finds — accesorios favoritos">
           <span class="brand-mark">MICHAEL KORS</span>
           <span class="tag" data-es="Accesorios · Designer look" data-en="Accessories · Designer look">Accesorios · Designer look</span>
           <a class="pin-save" href="#" data-desc-es="Dupes de joyería dorada que no dejan la piel verde, seleccionados por menos de $30." data-desc-en="Gold jewelry dupes that won't turn your skin green, all under $30." target="_blank" rel="noopener">
@@ -627,6 +637,7 @@
 
       <article class="pin-card" id="shoes">
         <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('calzado-petite.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="calzado-petite.png" alt="Petite Chic Finds — calzado petite">
           <span class="tag" data-es="Calzado" data-en="Shoes">Calzado</span>
           <a class="pin-save" href="#" data-desc-es="Sneakers para caminar, estilos casuales para el día a día y opciones elegantes para oficina u ocasiones especiales." data-desc-en="Sneakers for walking, casual styles for everyday wear, and polished options for work or special occasions.">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
@@ -645,6 +656,7 @@
 
       <article class="pin-card">
         <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('Elegant Dusk Dining by the Bay.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="Elegant Dusk Dining by the Bay.png" alt="Petite Chic Finds — Elegant Dusk Dining by the Bay">
           <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
           <a class="pin-save" href="#" data-desc-es="Blazers cortos para marcos petite: dónde termina el largo perfecto." data-desc-en="Cropped blazers for petite frames: where the perfect length ends." target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
@@ -661,6 +673,7 @@
 
       <article class="pin-card" id="beauty">
         <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('perfume-belleza-petite.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="perfume-belleza-petite.png" alt="Petite Chic Finds — perfume belleza petite">
           <span class="tag" data-es="Perfumes & Belleza" data-en="Perfume & Beauty">Perfumes & Belleza</span>
           <a class="pin-save" href="#" data-desc-es="Perfumes y pequeños favoritos de belleza para completar un look elegante y cotidiano." data-desc-en="Perfumes and small beauty favorites to complete an elegant everyday look.">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.024 0 1.518.769 1.518 1.69 0 1.03-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.194-.333 1.361-.052.219-.174.265-.4.16-1.495-.696-2.43-2.881-2.43-4.637 0-3.777 2.744-7.249 7.912-7.249 4.152 0 7.381 2.958 7.381 6.915 0 4.126-2.601 7.447-6.212 7.447-1.213 0-2.354-.631-2.744-1.375l-.746 2.845c-.27 1.038-1.001 2.339-1.489 3.131C9.936 23.83 10.955 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
@@ -677,6 +690,7 @@
 
       <article class="pin-card">
   <div class="pin-photo" style="aspect-ratio:1/1;background-image:url('Sunglasses that complete your look.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="Sunglasses that complete your look.png" alt="Petite Chic Finds — Sunglasses that complete your look">
     <span class="tag" data-es="Accesorios" data-en="Accessories">Accesorios</span>
   </div>
 
@@ -692,6 +706,7 @@
 </article>
 <article class="pin-card">
     <div class="pin-photo" style="aspect-ratio:3/2;background-image:url('blusas-petite-finds.png');background-size:cover;background-position:center;">
+          <img class="pin-image" src="blusas-petite-finds.png" alt="Petite Chic Finds — blusas petite finds">
   <span class="tag" data-es="Moda Petite" data-en="Petite Fashion">Moda Petite</span>
 </div>
 <div class="pin-body">
