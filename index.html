@@ -248,9 +248,12 @@
   .pin-photo{
     position:relative;
     width:100%;
+    height:240px;
     aspect-ratio:auto!important;
-    max-height:none;
-    display:block;
+    max-height:240px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     padding:0;
     overflow:hidden;
     background-color:#F1E9DE;
@@ -258,15 +261,17 @@
   .pin-photo .pin-image{
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
     max-width:100%;
+    object-fit:contain;
+    object-position:center;
   }
   .pin-photo::after{
     content:'';position:absolute;inset:0;
     background:linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.38) 100%);
   }
   .pin-photo .brand-mark{position:absolute;right:16px;top:16px;z-index:2;font-size:0.66rem;letter-spacing:0.14em;color:#fff;background:rgba(59,39,49,0.88);padding:7px 11px;border-radius:2px;font-family:'Work Sans',sans-serif;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.16);}
-  .accessory-card .pin-photo{aspect-ratio:auto!important;max-height:none;background-position:center!important;}
+  .accessory-card .pin-photo{aspect-ratio:auto!important;height:240px;max-height:240px;background-position:center!important;}
   .accessory-card .pin-photo::after{background:linear-gradient(180deg,rgba(0,0,0,0.05) 35%,rgba(0,0,0,0.48) 100%);}
   .accessory-card .pin-body{padding-top:22px;}
   .accessory-card .pin-body .cat{color:var(--rose-deep);text-transform:uppercase;letter-spacing:0.08em;font-size:0.68rem;}
@@ -479,7 +484,7 @@
     .menu-toggle{display:block;}
   }
   @media (max-width:560px){
-    .pin-photo{max-height:none;}
+    .pin-photo{height:200px;max-height:200px;}
     .masonry{column-count:1;}
     .wrap{padding:0 20px;}
     .hero{padding:52px 0 60px;}
@@ -790,9 +795,10 @@
       var descAttr = currentLang === 'en' ? 'data-desc-en' : 'data-desc-es';
       var desc = encodeURIComponent(btn.getAttribute(descAttr) || document.title);
       var photo = btn.closest('.pin-photo');
+      var img = photo ? photo.querySelector('.pin-image') : null;
       var bg = photo ? photo.style.backgroundImage : '';
       var match = bg.match(/url\\(['"]?([^'")]+)['"]?\\)/);
-      var mediaUrl = match ? new URL(match[1], window.location.href).href : window.location.href;
+      var mediaUrl = img && img.src ? img.src : (match ? new URL(match[1], window.location.href).href : window.location.href);
       var media = encodeURIComponent(mediaUrl);
       var pinUrl = 'https://www.pinterest.com/pin/create/button/?url=' + pageUrl + '&media=' + media + '&description=' + desc;
       window.open(pinUrl, '_blank', 'noopener');
