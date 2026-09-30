@@ -16,7 +16,7 @@
 <meta property="og:title" content="Petite Chic Finds">
 <meta property="og:description" content="Hallazgos de moda petite y decoración chic, curados para presupuestos reales. / Petite fashion & chic decor finds, curated on a real budget.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="REEMPLAZA-CON-URL-DE-TU-FOTO-PRINCIPAL.jpg">
+<meta property="og:image" content="petite-chic-cafe.png">
 <meta name="pinterest-rich-pin" content="true">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -355,6 +355,16 @@
   .nl-form button:hover{background:var(--rose);}
   .nl-note{font-size:0.76rem;color:#B79AA1;margin-top:14px;}
 
+  .affiliate-disclosure{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px 18px;
+    color:var(--plum-soft);
+    font-size:0.76rem;
+    line-height:1.5;
+    text-align:center;
+  }
+
   /* ---------- FOOTER ---------- */
   footer{padding:46px 0;}
   footer .wrap{
@@ -613,6 +623,8 @@
   </div>
 </section>
 
+<p class="affiliate-disclosure" data-es="Como Asociada de Amazon, puedo obtener ingresos por compras que cumplan los requisitos." data-en="As an Amazon Associate, I may earn from qualifying purchases.">Como Asociada de Amazon, puedo obtener ingresos por compras que cumplan los requisitos.</p>
+
 <footer>
   <div class="wrap">
     <span class="f-logo">Petite Chic Finds</span>
@@ -667,9 +679,11 @@
       var pageUrl = encodeURIComponent(window.location.href);
       var descAttr = currentLang === 'en' ? 'data-desc-en' : 'data-desc-es';
       var desc = encodeURIComponent(btn.getAttribute(descAttr) || document.title);
-      // media (la foto del pin) debe ser una URL de imagen real y pública
-      // una vez publiques el blog con fotos reales.
-      var media = pageUrl;
+      var photo = btn.closest('.pin-photo');
+      var bg = photo ? photo.style.backgroundImage : '';
+      var match = bg.match(/url\\(['"]?([^'")]+)['"]?\\)/);
+      var mediaUrl = match ? new URL(match[1], window.location.href).href : window.location.href;
+      var media = encodeURIComponent(mediaUrl);
       var pinUrl = 'https://www.pinterest.com/pin/create/button/?url=' + pageUrl + '&media=' + media + '&description=' + desc;
       window.open(pinUrl, '_blank', 'noopener');
     });
