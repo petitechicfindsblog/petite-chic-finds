@@ -271,6 +271,17 @@
   .pin-photo .brand-mark{position:absolute;right:16px;top:16px;z-index:2;font-size:0.66rem;letter-spacing:0.14em;color:#fff;background:rgba(59,39,49,0.88);padding:7px 11px;border-radius:2px;font-family:'Work Sans',sans-serif;font-weight:600;box-shadow:0 4px 12px rgba(0,0,0,0.16);}
   .accessory-card .pin-photo{aspect-ratio:3/2!important;height:auto;max-height:none;background-position:center!important;}
   .accessory-card .pin-photo::after{background:linear-gradient(180deg,rgba(0,0,0,0.05) 35%,rgba(0,0,0,0.48) 100%);}
+  .petite-fashion-card .pin-photo,
+  .blazer-editorial-card .pin-photo{
+    aspect-ratio:4/5!important;
+    height:auto;
+    max-height:none;
+  }
+  .petite-fashion-card .pin-image,
+  .blazer-editorial-card .pin-image{
+    object-fit:cover;
+    object-position:center;
+  }
   .accessory-card .pin-body{padding-top:22px;}
   .accessory-card .pin-body .cat{color:var(--rose-deep);text-transform:uppercase;letter-spacing:0.08em;font-size:0.68rem;}
   .pin-photo .tag{
@@ -584,7 +595,7 @@
       <p data-es="Guarda tus favoritos directo en Pinterest — el botón aparece al pasar el cursor sobre cada foto." data-en="Save your favorites straight to Pinterest — the button appears when you hover over each photo.">Guarda tus favoritos directo en Pinterest — el botón aparece al pasar el cursor sobre cada foto.</p>
     </div>
 
-      <article class="pin-card" id="petite-fashion">
+      <article class="pin-card petite-fashion-card" id="petite-fashion">
         <div class="pin-photo">
           <img class="pin-image" src="outfits-petite-clean.png" alt="Petite Chic Finds — petite jeans street style">
           <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
@@ -657,7 +668,7 @@
         </div>
       </article>
 
-      <article class="pin-card">
+      <article class="pin-card blazer-editorial-card">
         <div class="pin-photo">
           <img class="pin-image" src="Cicy Bell Cárdigan.png" alt="Petite Chic Finds — blazer petite editorial look">
           <span class="tag" data-es="Moda petite" data-en="Petite fashion">Moda petite</span>
