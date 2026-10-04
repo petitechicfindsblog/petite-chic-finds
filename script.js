@@ -1,3 +1,2 @@
 const menu=document.querySelector('.menu-btn');const mobile=document.querySelector('.mobile-nav');menu?.addEventListener('click',()=>{const open=mobile.classList.toggle('open');menu.setAttribute('aria-expanded',open)});
 document.querySelectorAll('.lang').forEach(btn=>btn.addEventListener('click',()=>{const lang=btn.dataset.lang;document.documentElement.lang=lang;document.querySelectorAll('[data-es][data-en]').forEach(el=>{el.textContent=el.dataset[lang]});document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b===btn));}));
-document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>e.preventDefault()));
